@@ -1,5 +1,5 @@
 /// <reference types='cypress' />
-import { url, body } from "../../../PageObjects/PageElements/APIPageElements.json";
+import { url, body } from "../../fixtures/PetstoreData.json";
 
 describe("CY API test", () => {
   it("Find pet by ID", () => {
@@ -21,7 +21,7 @@ describe("CY API test", () => {
   });
 
   it("Delete a pet", () => {
-    cy.request("DELETE", `${url}/7`).should(
+    cy.request("DELETE", `${url}/5`).should(
       (response) => {
         expect(response.status).to.eq(200);
       }
