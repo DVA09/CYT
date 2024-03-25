@@ -1,7 +1,7 @@
 /// <reference types='cypress' />
 import { url, body } from "../../fixtures/PetstoreData.json";
 
-describe("CY API test", () => {
+describe("CY API test", { tags: "Container2" }, () => {
   it("Find pet by ID", () => {
     cy.request("GET", `${url}/8`).should((response) => {
       expect(response.status).to.eq(200);

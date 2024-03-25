@@ -27,7 +27,7 @@ const InventoryItem_Elements = new inventoryItemPageElements();
 const Footer_Elements = new footerPageElements();
 const AddToCart_Elements = new addToCartPageElements(); 
 
-describe("Swag Labs tests", () => {
+describe("Swag Labs tests", { tags: "Container1" }, () => {
   beforeEach(() => {
     cy.visit(url);
     Login_Elements.username();
