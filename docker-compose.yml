@@ -1,0 +1,12 @@
+ version: '3'
+ services:
+   test1:
+     image: <your_docker_registry_host>/cypress-parallel:1.0.0
+     environment:
+      GREP_TAGS: "Container1"
+     command: ["/usr/local/bin/npm", "run", "e2e-run"]
+   test2:
+     image: <your_docker_registry_host>/cypress-parallel:1.0.0
+     environment:
+      GREP_TAGS: "Container2"
+     command: ["/usr/local/bin/npm", "run", "e2e-run"]
