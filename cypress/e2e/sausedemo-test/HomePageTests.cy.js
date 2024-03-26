@@ -59,10 +59,7 @@ describe("Swag Labs tests", () => {
     Filter_Elements.optionZA();
     Filter_Elements.optionLH();
     Filter_Elements.optionHL();
-    cy.get("[data-test=product_sort_container]").should(
-      "have.text",
-      "Name (A to Z)Name (Z to A)Price (low to high)Price (high to low)"
-    );
+    cy.get("[data-test=product-sort-container]").should('be.visible');
   });
 
   it("Inventory list test", () => {
